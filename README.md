@@ -1,6 +1,8 @@
 # delete-old-workflow-runs
 A GitHub Action used to delete workflow runs from a repository.
 
+This is a fork of the archived repro orginal written by [MajorScruffy](https.//github.com/MajorScruffy/delete-old-workflow-runs), modified to support node v20 and updated dependencies.
+
 Behind the scenes it uses [Octokit request-action](https://github.com/octokit/request-action) to call the GitHub API, so you'll need to add the GITHUB_TOKEN as an environment variable:
 ```
 env:
@@ -11,9 +13,9 @@ env:
 ```
 steps:
   - name: Delete workflow runs
-    uses: MajorScruffy/delete-old-workflow-runs@v0.2.0
+    uses: Rubber1Duck/delete-old-workflow-runs@v0.4.0
     with:
-      repository: MajorScruffy/delete-old-workflow-runs   # replace this with your own repository
+      repository: Rubber1Duck/delete-old-workflow-runs   # replace this with your own repository
       older-than-seconds: 86400                           # remove all workflow runs older than 1 day
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
