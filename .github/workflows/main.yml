@@ -1,4 +1,5 @@
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
   delete-workflow-runs:
@@ -14,12 +15,11 @@ jobs:
         with:
           repository: Rubber1Duck/delete-old-workflow-runs
           workflow: ".github/workflows/main.yml"
-          # older-than-seconds: 3600
+          older-than-seconds: 3600
           # created-before: "2021-12-08T16:34:00Z"
           # actor: test@test.com
           # branch: main
           # event: push
           # event: completed
-          # what-if: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
