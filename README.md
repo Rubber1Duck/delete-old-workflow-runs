@@ -13,7 +13,7 @@ env:
 ```
 steps:
   - name: Delete workflow runs
-    uses: Rubber1Duck/delete-old-workflow-runs@v0.4.0
+    uses: Rubber1Duck/delete-old-workflow-runs@v0.4.1
     with:
       repository: Rubber1Duck/delete-old-workflow-runs   # replace this with your own repository
       older-than-seconds: 86400                           # remove all workflow runs older than 1 day
