@@ -1,4 +1,5 @@
 import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
+const require = __WEBPACK_EXTERNAL_createRequire(import.meta.url);
 /******/ var __webpack_modules__ = ({
 
 /***/ 9883:
