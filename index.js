@@ -1,10 +1,10 @@
 // Vorher (CommonJS):
-// const { inspect } = require("util");
+const { inspect } = require("util");
 // const core = require("@actions/core");
 // const { Octokit } = require("@octokit/action");
 
 // Nachher (ES-Module):
-import { inspect } from "util";
+// import { inspect } from "util";
 import * as core from "@actions/core";
 import { Octokit } from "@octokit/action";
 

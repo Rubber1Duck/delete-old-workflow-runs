@@ -66694,8 +66694,6 @@ module.exports = require("util");
 /************************************************************************/
 var __webpack_exports__ = {};
 
-// EXTERNAL MODULE: external "util"
-var external_util_ = __nccwpck_require__(9023);
 ;// CONCATENATED MODULE: external "os"
 const external_os_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("os");
 ;// CONCATENATED MODULE: ./node_modules/@actions/core/lib/utils.js
@@ -74561,12 +74559,12 @@ function getApiBaseUrl() {
 
 ;// CONCATENATED MODULE: ./index.js
 // Vorher (CommonJS):
-// const { inspect } = require("util");
+const { inspect } = require("util");
 // const core = require("@actions/core");
 // const { Octokit } = require("@octokit/action");
 
 // Nachher (ES-Module):
-
+// import { inspect } from "util";
 
 
 
@@ -74702,7 +74700,7 @@ async function main() {
             warning(`Something went wrong while deleting workflow "${title}" with ID:${workflowRun.id}. Status code: ${status}`);
           }
         } catch (error) {
-          info((0,external_util_.inspect)(error));
+          info(inspect(error));
         }
       }
 
@@ -74715,7 +74713,7 @@ async function main() {
       }
     }
   } catch (error) {
-    info((0,external_util_.inspect)(error));
+    info(inspect(error));
     setFailed(error.message);
   }
 }
